@@ -73,3 +73,19 @@ transition: color 0.3s ease, top 0.3s ease;
 	-o-transform: scale(1.5) rotate(360deg);
 	transform: scale(1.5) rotate(360deg);
 }
+
+# Delay
+	
+	# short notation
+	transition: all 0.3s ease 0.3s;
+	
+	# long notation
+	transition: all 0.3s ease;
+	transition-property: right;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	transition-delay: 0.3s;
+
+# Image animation
+	
+	

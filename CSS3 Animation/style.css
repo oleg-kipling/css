@@ -1,3 +1,5 @@
+/*------------------------NAVIGATION------------------------*/
+
 nav.main-nav {
 	background: #333;
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2F2F2F), to(#4F4F4F));
@@ -57,7 +59,7 @@ nav.main-nav {
 	transition: color 0.3s ease, top 0.3s ease;
 }
 
-/*SOCIAL MEDIA BUTTONS*/
+/*------------------------SOCIAL MEDIA BUTTONS------------------------*/
 
 .social {
 	height: 32px;
@@ -84,7 +86,8 @@ nav.main-nav {
 	-o-transform: scale(1.5) rotate(360deg);
 	transform: scale(1.5) rotate(360deg);
 }
-/*BIG BUTTONS*/
+
+/*------------------------BIG BUTTONS------------------------*/
 
 .button {
 	background-color: #4AE;
@@ -96,7 +99,17 @@ nav.main-nav {
 	overflow: hidden;
 	padding: 5px;
 	position: relative;
-	box-shadow: 1px 1px 2px #AAA, 1px 1px 1px #6CF inset; 
+	box-shadow: 1px 1px 2px #AAA, 1px 1px 1px #6CF inset;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.button:hover {
+	background-color: #6CF;
+	border: 1px solid #4AE;
+	box-shadow: 1px 1px 5px #AAA, 1px 1px 1px #9EF inset;
 }
 
 .button img {
@@ -105,17 +118,70 @@ nav.main-nav {
 	left: 8px;
 }
 
+.button img.over {
+	z-index: 500;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.button:hover img.over {
+	-webkit-transform: scale(5) rotate(20deg);
+	-moz-transform: scale(5) rotate(20deg);
+	-ms-transform: scale(5) rotate(20deg);
+	-o-transform: scale(5) rotate(20deg);
+	transform: scale(5) rotate(20deg);
+	opacity: 0;
+}
+
+.button img.under {
+	opacity: 0.25;
+	z-index: 499;
+}
+
 .button span {
 	color: #FFF;
 	text-shadow: 0px 1px #888;
-	font-size: 22px;
 	text-decoration: none;
 	position: absolute;
-	top: 30px;
+}
+
+.button span.big-text { 
+	font-size: 22px;
+	top: 25px;
+	right: 20px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.button:hover span.big-text {
+	top: 15px;
+}
+
+.button span.small-text {
+	font-size: 14px;
+	top: 40px;
+	right: -200px;
+	-webkit-transition: all 0.3s ease 0.3s;
+	-moz-transition: all 0.3s ease 0.3s;
+	-o-transition: all 0.3s ease 0.3s;
+	transition: all 0.3s ease 0.3s;
+}
+
+.button:hover span.small-text {
 	right: 20px;
 }
 
-/*ACCORDION*/
+.rounded {
+	border-radius: 5px;
+}
+
+
+/*------------------------ACCORDION------------------------*/
+
 .accordion {
 	list-style-type: none;
 	padding: 0; 

@@ -1,0 +1,20 @@
+<style type="text/css">
+	#adam {
+		background:url(adam.png);
+		width: 100px;
+		height: 150px;
+		-webkit-animation: walk-east 1.0s step(8) infinite;
+		animation: walk-east 1.0s step(8) infinite;
+	}
+
+	@-webkit-keyframes walk-east {
+		from { background-position: 0px;}
+		to { background-position: -960px;}
+	}
+
+	@keyframes walk-east {
+		from { background-position: 0px;}
+		to { background-position: -960px;}
+	}
+</style>
+<div id="adam"></div>

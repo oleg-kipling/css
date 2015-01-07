@@ -1,0 +1,31 @@
+.animate-this {
+	width: 200px;
+	height: 200px;
+	background-color: #0A0;
+	position: absolute;
+	/*animation: left-to-right 2s;
+	-webkit-animation: left-to-right 2s;*/
+
+	/*logn*/
+	/*-webkit-animation-name: left-to-right;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 4s;
+	-webkit-animation-iteration-count: 3;
+	-webkit-animation-direction: alternate; normal 
+	-webkit-animation-play-state: paused;  running, можно также остановить в процессе с помощью js*/
+
+	/*short*/
+	animation: left-to-right 2s ease 0s infinite alternate;
+	-webkit-animation: left-to-right 2s ease 0s infinite alternate;
+}
+
+@keyframes left-to-right {
+	from { left: 0px; }
+	  to { left: 400px;}
+}
+
+@-webkit-keyframes left-to-right {
+	from { left: 0px; }
+	  to { left: 400px;}
+}

@@ -1,0 +1,56 @@
+html, body, p, h1, h2, h3, h4, h5, h6, img {
+	margin: 0px;
+	padding: 0px;
+}
+
+.portfolio {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.portfolio-item {
+	width: 300px;
+	height: 400px;
+	float: left;
+	margin-top:60px;
+	position: relative;
+	/*перспетива*/
+	-webkit-perspective: 500;
+}
+
+.portfolio-bg {
+	-webkit-transform: rotateY(30deg);
+	-webkit-transition: -webkit-transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-bg {
+	-webkit-transform: rotateY(0deg);
+}
+
+.portfolio-item:hover .portfolio-description {
+	-webkit-transform: rotateY(0deg) translateZ(0px);
+	transform: rotateY(0deg);
+}
+
+.portfolio-description {
+	background-color: #F0EDE7;
+	color:#8B7D5E;
+	font-size: 20px;
+	width: 190px;
+	padding: 20px;
+	position: absolute;
+	top: 220px;
+	left: 35px;
+	box-shadow: 0px 0px 10px #000;
+	/*translateZ(60px) - отодвигает в перспективе по Z*/
+	-webkit-transform: rotateY(30deg) translateZ(60px);
+	-webkit-transition: -webkit-transform 0.5s ease;
+	transition: transform 0.5s ease;
+}
+
+h4 {
+	color: #F2AF1D;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 10px;
+}

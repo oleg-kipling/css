@@ -1,0 +1,124 @@
+
+# Short Description
+
+div {
+transform: translateX(100em);
+-webkit-transform: translateX(100px) translateY(300px) translateZ(300px);
+				   scaleX(2) scaleY(.7) scaleZ(3) scale3D(2, .7, 3);
+				   rotateX(40deg) rotateY(40deg) rotateZ(40deg)
+
+-webkit-transform: translate3D(100px,100px,300px) scale3D(2, .7, 3) rotate3D(1,0,0, 40deg);
+}
+
+# Ortographic /  Perspective
+/*Всегда должно идти вначале perspective(200px)*/
+-webkit-transform: perspective(200px) rotateX(40deg) translateX(400px) ;
+
+/*Изменение точeк схода перспективы*/
+-webkit-perspective-origin: left top;
+/*Так же можно добавлять в процентах*/
+-webkit-perspective-origin: 100% 100%;
+
+
+#plane {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	/*Имеет значение порядок выполнения параметров*/
+	-webkit-transform: translateX(100px) rotateY(90deg);
+	-webkit-transform: rotateY(90deg) translateX(100px);
+}
+
+/*Не работает в IE и Opera*/
+transform-style: preserve-3D;
+
+
+/*3D Cube*/
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS 3D Cube</title>
+		<style type="text/css">
+			
+			#viewport {
+				-webkit-perspective: 1000px;
+				-moz-perspective:1000px;
+				perspective:1000px;
+			}
+
+			#cube {
+				-webkit-transform:rotateX(0deg);
+				-moz-transform:rotateX(0deg);
+				transform:rotateX(0deg);
+
+				-webkit-transform-style: preserve-3D;
+				transform-style: preserve-3D;
+			}
+
+			#cube div {
+				width: 200px;
+				height: 200px;
+				opacity: .5;
+				position: absolute;
+			}
+
+			#front {
+				background: red;
+				-webkit-transform:translateZ(100px);
+			}
+
+			#back {
+				background: red;
+				-webkit-transform:translateZ(-100px);
+			}
+
+			#top{
+				background: yellow;
+				-webkit-transform:translateY(-100px) rotateX(90deg);
+			}
+
+			#bottom{
+				background: yellow;
+				-webkit-transform:translateY(100px) rotateX(90deg);
+			}
+
+			#left{
+				background: green;
+				-webkit-transform:translateX(-100px) rotateY(-90deg);
+			}
+
+			#right{
+				background: green;
+				-webkit-transform:translateX(100px) rotateY(90deg);
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<div id="viewport">
+			<div id="cube">
+				<div id="front"></div>
+				<div id="back"></div>
+				<div id="top"></div>
+				<div id="bottom"></div>
+				<div id="left"></div>
+				<div id="right"></div>
+			</div>
+		</div>
+
+	</body>
+</html>
+
+/*фиксирует объект четко в центре браузера*/
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -100px;
+
+/*Pain of glass*/
+

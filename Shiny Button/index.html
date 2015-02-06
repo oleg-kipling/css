@@ -1,0 +1,62 @@
+<!-- http://cssanimation.rocks/post/pseudo-elements/ -->
+
+<!-- Note on “::” versus “:”
+It’s generally accepted that we use the double colon :: to denote pseudo-elements (as opposed to pseudo-classes like :hover, :first-child). If you’re adding IE8 support, it’s best to use the single : instead. All other browsers and newer versions of IE support the double. -->
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Shiny Button, Animating pseudo-elements</title>
+    <style>
+        button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            bottom: -50%;
+            left: -50%;
+            background: linear-gradient(to bottom, rgba(229, 172, 142, 0.1), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0.1));
+            transform: rotateZ(60deg) translate(-5em, 7.5em);
+        }
+        
+        button {
+            background: #d1703c;
+            color: #fff;
+            font-size: 14px;
+            border: 4px solid #d1703c;
+            border-radius: 0.5em;
+            padding: 0 1em;
+            position: relative;
+            overflow: hidden;
+            line-height: 32px;
+        }
+        
+        button:hover::after {
+            animation: sheen 1s forwards;
+            -webkit-animation: sheen 1s forwards;
+        }
+        
+         @-webkit-keyframes sheen {
+            100% {
+                transform: rotateZ(60deg) translate(1em, -9em);
+                -webkit-transform: rotateZ(60deg) translate(1em, -9em);
+            }
+        }
+        
+        @keyframes sheen {
+            100% {
+                transform: rotateZ(60deg) translate(1em, -9em);
+                -webkit-transform: rotateZ(60deg) translate(1em, -9em);
+            }
+        }
+    </style>
+</head>
+
+    <body>
+        <button>SHINY EFFECT</button>
+    </body>
+
+</html>

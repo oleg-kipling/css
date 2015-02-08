@@ -1,0 +1,32 @@
+body{
+  background: #3d3d3d;
+  margin: 0;
+  padding: 0;
+  font:16px/24px Arial, Tahoma, "Trebuchet MS", sans-serif; 
+  color:#ccc;
+}
+.main{
+  width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+img{border: none; border: 10px solid #f5f5f5; -webkit-transition: all 0.3s ease; cursor: pointer;}
+p{margin: 0; padding: 0;}
+
+h1, h2, h3{color: #fff; font-size: 24px; font-weight: 400;}
+h2{font-size: 22px;}
+h3{font-size: 20px; padding: 40px 0; margin: 40px 0 0; border-top: 1px dashed #777;}
+
+
+img.blur:hover{-webkit-filter: blur(2px);}
+img.brightness:hover{-webkit-filter: brightness(3);}
+img.contrast:hover{-webkit-filter:contrast(1.5);}
+img.saturate:hover{-webkit-filter:saturate(200%);}
+img.opacity:hover{-webkit-filter:opacity(50%);}
+img.invert:hover{-webkit-filter: invert(100%);}
+img.sepia:hover{-webkit-filter: sepia(0.5);}
+img.grayscale:hover{-webkit-filter: grayscale(0.7);}
+img.hue-rotate:hover{-webkit-filter: hue-rotate(270deg);}
+img.drop-shadow{position:relative; top: 0; left: 0;}
+img.drop-shadow:hover{-webkit-filter: drop-shadow(5px 5px 10px #111); top: -3px; left:-3px;}

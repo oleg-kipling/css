@@ -1,0 +1,26 @@
+<!-- https://cssanimation.rocks/twitter-fave/ -->
+<!-- With this method we can pause, rewind, or make all sorts of other adjustments to the animation using CSS. -->
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Twitter's "fave" animation</title>
+    <style>
+        .fave {
+            width: 70px;
+            height: 50px;
+            background: url("twitter_fave.png") no-repeat;
+            background-position: 0 0;
+        }
+        .fave:hover {
+            background-position: -3519px 0;
+            transition: background 1s steps(55);
+        }
+    </style>
+</head>
+
+    <body>
+       <section class="fave"></section>
+    </body>
+</html>

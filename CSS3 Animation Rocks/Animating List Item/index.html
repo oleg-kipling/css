@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- https://cssanimation.rocks/list-items/ -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<title>Animating list Item</title>
+    <style>
+        li {
+            list-style:none;
+            background: #d1703c;
+            color: #fff;
+            height: 0;
+            line-height: 2em;
+            margin: 0;
+            padding: 0 0.5em;
+            overflow: hidden;
+            width: 10em;
+        }
+        
+        li.show {
+            height: 2em;
+            margin: 2px 0;
+        }
+    </style>
+    
+</head>
+
+    <body>
+        <ul id="list">
+            <li class="show">List item</li>
+            <li class="show">List item</li>
+        </ul>
+        <button id="add-to-list">Add a list item</button>
+    
+        <script>
+            function myFunction() {
+                var x = document.createElement("LI");
+                var t = document.createTextNode("Coffee");
+                x.appendChild(t);
+                document.getElementById("list").appendChild(x);
+            }
+        </script>
+<!--     <script type="text/javascript">
+        // Handler for .ready() called.
+        document.getElementById('add-to-list').onсlick = function() {
+        var list = document.getElementById('list');
+        var newLI = document.createElement('li');
+            newLI.innerHTML = 'A new item';
+        list.appendChild(newLI);
+        setTimeout(function() {
+            newLI.addClass('show');
+            }, 10); 
+        }
+    </script> -->
+
+    </body>
+</html>

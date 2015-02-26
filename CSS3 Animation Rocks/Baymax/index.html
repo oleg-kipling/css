@@ -14,6 +14,49 @@
             background-repeat: no-repeat;
             height: 100vh;
         }
+        .baymax {
+            border-bottom: 1.5em solid #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            transform: translate(-50%, -40%);
+        }
+        .baymax::before {
+            -webkit-animation: blink 6s 0.1s infinite;
+            background: linear-gradient(to bottom, #efefef, #efefef 50%, #000 50%, #000);
+            background-position: 0 -100%;
+            background-size: 200%;
+            border-radius: 50%;
+            content: "";
+            position: absolute;
+            width: 12em;
+            height: 12em;
+            left: -9em;
+            top: -6em;
+            transform: skewX(-4deg);
+        }
+
+        .baymax::after {
+            -webkit-animation: blink 6s infinite;
+            background: linear-gradient(to bottom, #efefef, #efefef 50%, #000 50%, #000);
+            background-position: 0 -100%;
+            background-size: 200%;
+            border-radius: 50%;
+            content: "";
+            position: absolute;
+            width: 12em;
+            height: 12em;
+            right: -9em;
+            top: -6em;
+            transform: skewX(4deg);
+        }
+
+        @-webkit-keyframes blink {
+            0%, 50% { background-position: 0 100%; }
+            85%, 95% { background-position: 0 75%; }
+            100% { background-position: 0 100%; }
+        }
     </style>
 </head>
 

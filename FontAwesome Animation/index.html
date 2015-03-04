@@ -1,0 +1,38 @@
+<!-- FIX: delete blur on hover -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>FontAwesome Animation</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+  <style>
+          
+    li { list-style-type: none;
+         margin: 30px;}
+    
+    .social-media {
+        position: relative;
+        display: inline-block;
+        font-family:FontAwesome;
+        font-size: 2.222em;
+        cursor:pointer;
+    }
+    
+    .grow { transition:all .3s ease; transform:scale(1);}
+    .grow:hover {transform:scale(1.5) rotate(15deg);}
+            
+    .colored { transition:all .4s ease; color:black;}
+    .colored:hover { color:#ff0000; }
+      
+    </style>
+</head>
+
+<body>
+   <ul>
+    <li><a class="social-media grow colored"></a></li>
+    <li><a class="social-media grow colored"></a></li>
+    <li><a class="social-media grow colored"></a></li>
+    <li><a class="social-media grow colored"></a></li>
+   </ul>
+</body>
+</html>

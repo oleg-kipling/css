@@ -1,0 +1,164 @@
+/* Logos */
+.logo-small {
+    width:50px;
+/*    margin-top: 14px*/
+}
+.logo {
+    width:150px;
+}
+
+/* Arrow nav*/
+.nav-btn {
+    position:fixed;
+    right: 2%;
+    bottom:10%;
+}
+
+/* Social Icons */
+.social-container {
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+.social-container li {
+    position: relative;
+    display: inline-block;
+    margin-top: 7px;
+    margin: 0 15px;
+}
+
+.social-media {
+    position: relative;
+    display: inline-block;
+    padding: 8px 6px;
+    font: normal 2.5em/1.38 FontAwesome;
+    color: black;
+}
+
+a.social-media {
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+a:hover.social-media {
+  transform: scale(1.5) rotate(14deg);
+  -webkit-transform: scale(1.5) rotate(14deg);
+	-moz-transform: scale(1.5) rotate(14deg);
+	-ms-transform: scale(1.5) rotate(14deg);
+	-o-transform: scale(1.5) rotate(14deg);    
+}
+
+/* flip3d */
+.flip3d {
+	width:180px;
+	height:180px;
+	float:left
+}
+/* All who include .front*/
+.flip3d > .front {
+	position: absolute;
+	transform: perspective(600px) rotateY(0deg);
+	width:175px;
+	height:175px;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+}
+
+.flip3d > .back {
+	position: absolute;
+	transform: perspective(600px) rotateY(180deg);
+	width:175px;
+	height:175px;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+}
+
+.flip3d:hover > .front {
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+.flip3d:hover > .back {
+	transform: perspective(600px) rotateY(0deg);
+}
+
+/* FIXES Typography */
+.projects {
+    margin-top: -170px;
+}
+
+.intro {
+	text-align: center;
+	padding-top: 90px;
+	padding-bottom: 160px;
+}
+
+.sizeH {
+    padding: 5% 0;
+    height: 370px;
+}
+
+.paddigs {
+    margin: 25px 0;
+}
+
+.t0 {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.t01 {
+    font-size: 25px;
+    padding: 0 0 10px 10px;
+    margin: 0;
+    font-weight: 300;
+}
+
+h1.health-samurai {
+    font-weight: 500;
+    font-size: 72px;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.looking {
+    font-weight: 200;
+    margin: 0;
+    line-height: 1;
+    font-size:42px;
+    padding: 10px 0;
+}
+
+.sizeS {
+    font-weight: 200;
+    font-size: 21px;
+}
+
+.font01 {
+    font-weight: 400;
+}
+
+.pading01 {
+    padding-right: 10px;
+}
+
+.inlineblock {
+    display: inline-block;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+}

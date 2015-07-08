@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<link href="css/impress-demo.css" rel="stylesheet" />
+</head>
+<body>
+
+<!--<a href="#" id="nxt">Next</a>-->
+<!--<a href="#" id="prev">Prevous</a>-->
+<!--<a href="#" id="end">End</a>-->
+ 
+<div id="impress">
+   
+    <div class="step" data-x="300" data-y="400" data-z="400"><h1>H1 I am the first step</h1></div>
+    <div class="step" data-rotate-z="10" data-rotate-y="40" data-rotate-x="90"><h2>Hello World!</h2></div>
+    <div class="step" id="endS" data-scale="4" data-x="2000"><h1>Scale Me!</h1><img src="img.jpg" width="350" height="219" alt="Mountines"></div> 
+    
+</div>
+
+<script src="js/impress.js"></script>
+<script>
+    
+    impress().init();
+    
+//    var elem = document.getElementById('nxt');
+//    elem.addEventListener('click',function(){
+//        impress().next();
+//    },false);
+//    
+//    var prevous = document.getElementById('prev');
+//    prevous.addEventListener('click', function(){
+//        
+//        impress().prev();
+//        
+//    },false);
+//    
+//    var end = document.getElementById('end');
+//    end.addEventListener('click', function(){
+//        
+//        impress().goto('endS', 4000);
+//        
+//    },false);
+    
+</script>
+</body>
+</html>

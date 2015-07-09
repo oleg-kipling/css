@@ -1,0 +1,110 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OridoMi Demo</title>
+<style type="text/css">
+    
+.accord{
+    width: 400px;
+    height: 150px;
+    background: #09C;
+    color: white;
+    font-size: 2em;
+}
+    
+</style>
+</head>
+
+<body>
+<div class="accord" id="accord">Hello World</div>
+<script src="oridomi.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function(){
+    function init(){
+        
+        var Accord = document.getElementById('accord');
+        
+        var AccordOptions = new OriDomi(Accord, {
+        
+            vPanels: 4,
+            hPanels: 4,
+            perspective: 500,
+            shading: true,
+            touchEnabled: false,
+            speed: 1000
+        
+        });
+         
+        Accord.addEventListener('mouseover',function(){
+            
+            AccordOptions.accordion(100, 'b', {
+                callback: function(){alert('completed');}
+            });
+            
+        },false);
+        
+        Accord.addEventListener('mouseout',function(){
+            
+            AccordOptions.reset();
+            
+        },false);
+    
+       /*AccordOptions.reveal(20,'b');
+        
+        Accord.addEventListener('mouseover',function(){
+            
+            AccordOptions.reveal(100);
+            
+        },false);
+        
+        Accord.addEventListener('mouseout',function(){
+            
+            AccordOptions.reset();
+            
+        },false);*/
+        
+       /* AccordOptions.curl(20,'t');
+        
+        Accord.addEventListener('mouseover',function(){
+            
+            AccordOptions.curl(100);
+            
+        },false);
+        
+        Accord.addEventListener('mouseout',function(){
+            
+            AccordOptions.reset();
+            
+        },false);*/
+        
+       /*AccordOptions.stairs(10,'t');
+        
+        Accord.addEventListener('mouseover',function(){
+            
+            AccordOptions.stairs(100);
+            
+        },false);
+        
+        Accord.addEventListener('mouseout',function(){
+            
+            AccordOptions.reset();
+            
+        },false);*/
+               
+       /*Accord.addEventListener('mouseover',function(){
+            
+            AccordOptions.foldUp();
+            
+        },false);
+        
+        Accord.addEventListener('mouseout',function(){
+            
+            AccordOptions.unfold();
+            
+        },false);*/
+    }
+    document.addEventListener('DOMContentLoaded',init, false);
+})();
+</script>
+</body>
+</html>

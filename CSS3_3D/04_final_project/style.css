@@ -1,0 +1,79 @@
+#viewport {
+    -webkit-perspective: 1000px;
+    -moz-perspective:1000px;
+    perspective:1000px;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+}
+
+#cube {
+    -webkit-transform:rotateX(0deg);
+    transform:rotateX(0deg);
+
+    -webkit-transform-style: preserve-3D;
+    transform-style: preserve-3D;
+    width: 100%;
+    height: 100%;
+    -webkit-transition:all 2s;
+}
+
+#cube div {
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    position: absolute;
+}
+
+#front {
+    background: red;
+    -webkit-transform:translateZ(150px);
+}
+
+#back {
+    background: red;
+    -webkit-transform:translateZ(-150px) rotateY(-180deg);
+}
+
+#top{
+    background: yellow;
+    -webkit-transform:translateY(-150px) rotateX(90deg);
+}
+
+#bottom{
+    background: yellow;
+    -webkit-transform:translateY(150px) rotateX(-90deg);
+}
+
+#left{
+    background: green;
+    -webkit-transform:translateX(-150px) rotateY(-90deg);
+}
+
+#right{
+    background: green;
+    -webkit-transform:translateX(150px) rotateY(90deg);
+}
+
+#anim:hover + #viewport > #cube {
+    -webkit-transform: translateX(400px) rotateX(-290deg) rotateY(150deg) rotateZ(130deg);
+}
+
+#date, #dateOver {
+    position: absolute;
+    background: #FFF;
+    width: 650px;
+    margin-left: -135px;
+    height: 247px;
+}
+
+#date.hidden {
+    display: none;
+}
+
+#dateOver {
+    background: url(grid.png) repeat-x left bottom #FFF;
+}

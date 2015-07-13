@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS 3D Cube</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="jquery-ui.css">
+	</head>
+	<body>
+		<a href="#" id="anim">Animate</a>
+		<div id="viewport">
+			<div id="cube">
+				<div id="front">
+				    <div id="pic"><img src="profile_pic.jpg" height="161" width="161" alt="Profile Picture"></div>
+				    <h1>Envanto</h1>
+				    <input type="password" placeholder="Password" />
+				</div>
+				<div id="right">
+                    <input class="m40" type="text" placeholder="Name" />
+                    <div id="wrap">
+                        <input id="dateTrigger" type="text" placeholder="Date Joinded" />
+                        <div id="date"><div id="middleDark"></div></div>
+                        <div id="dateOver"></div>
+                    </div>
+                    <input type="text" placeholder="Email" />
+                    <textarea placeholder="Address"></textarea>
+                    <a href="#" class="bck">Back</a>
+                    <a href="#" class="bxt">Next</a>
+			</div>
+                <div id="back"><h1>Text</h1></div>
+				<div id="left"><h1>Text</h1></div>
+				<div id="top"><h1>Text</h1></div>
+				<div id="bottom"><h1>Text</h1></div>
+		    </div>
+		
+    <script src="modernizr.js" type="text/ecmascript"></script>
+    <script src="jquery.js" type="text/ecmascript"></script>
+	<script src="jquery-ui.js" type="text/ecmascript"></script>
+	<script src="oridomi.js" type="application/ecmascript"></script>
+	<script type="application/ecmascript">
+        $(function(){
+            $('#daveOver').datepicker({
+                numberOfMonts: 3,
+                prevText: '<',
+                nextText: '>';
+            });
+            
+            $('#date').oriDomi({
+                hPanels:5;
+                touchEnabled: false;
+                speed: 400;
+                perspective: 500;
+            })
+            .oriDomi('accordion', -100, 'top', {
+                callback: $('#date').addClass('hidden')
+            });
+            $('dateTrigger').on('focus', function(){
+                $('#date').fadeIn(200).oriDomi().reset();
+                
+                $('#dateOver').find('*').addClass('NotMe');
+                
+                $('.ui-corner-all').on('mousedown', function {
+                    $('#dateOver').find('*').addClass('NotMe');
+                });
+                
+                setTimeout(function(){
+                    $('#dateOver').fadeIn(200);
+                },600);
+            });
+        });
+    </script>
+	</body>
+</html>

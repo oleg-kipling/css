@@ -1,0 +1,50 @@
+/*
+Error: Invalid CSS after "...h.MW8szz76.dpuf": expected "{", was ""
+        on line 399 of /Users/medappmac/Documents/Dropbox/Github/css/sass/test-1/sass/styles.scss
+
+394:     @include alternating-rows-and-columns($alice-blue, $ash-gray, $table-color, $white);
+395:  
+396:     width: 400px;
+397:   }
+398: }
+399: - See more at: http://www.newthinktank.com/2015/04/sass-video-tutorial/#sthash.MW8szz76.dpuf
+
+Backtrace:
+/Users/medappmac/Documents/Dropbox/Github/css/sass/test-1/sass/styles.scss:399
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:1164:in `expected'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:1098:in `expected'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:1093:in `tok!'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:638:in `block'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:633:in `ruleset'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:657:in `block_child'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:650:in `block_contents'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/scss/parser.rb:42:in `parse'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/engine.rb:403:in `_to_tree'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/engine.rb:278:in `render'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:293:in `watch'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/bin/compass:44:in `call'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/bin/compass:19:in `load'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/bin/compass:19:in `<main>'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/medappmac/.rvm/gems/ruby-1.9.3-p194/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...h.MW8szz76.dpuf\": expected \"{\", was \"\"\A         on line 399 of /Users/medappmac/Documents/Dropbox/Github/css/sass/test-1/sass/styles.scss\A \A 394:     @include alternating-rows-and-columns($alice-blue, $ash-gray, $table-color, $white);\A 395:  \A 396:     width: 400px;\A 397:   }\A 398: }\A 399: - See more at: http://www.newthinktank.com/2015/04/sass-video-tutorial/#sthash.MW8szz76.dpuf"; }

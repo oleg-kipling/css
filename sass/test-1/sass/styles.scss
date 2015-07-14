@@ -1,0 +1,399 @@
+@import "compass";
+@import "partials/variables";
+@import "partials/normalize";
+@import "partials/mixins";
+@import "partials/base";
+@import "compass/css3";
+ 
+#banner{
+  padding: 10px;
+  padding-bottom: 0px;
+}
+ 
+#logo {
+  width: 24px;
+  height: auto;
+}
+ 
+#logo-text {
+  vertical-align: 50%;
+  color: #00647D;
+  font-weight: bold;
+}
+ 
+#search-input{
+  width: 302px;
+  vertical-align: 50%;
+}
+ 
+#search-button{
+  vertical-align: 80%;
+  background-color: #00647D;
+  padding: 5px 12px;
+  font: 13px sans-serif;
+  text-decoration: none;
+  border: 1px solid #000;
+  border-color: #aaa #444 #444 #aaa;
+  color: #FFF;
+}
+ 
+#horz-nav {
+  background-color: #00647D;
+  max-width: 800px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+ 
+#horz-nav p {
+  padding-top: 10px;
+}
+ 
+#horz-nav p a{
+  text-decoration: none;
+  color: #FFF;
+  padding-left: 10px;
+}
+ 
+#horz-nav p a:hover{
+  color: $orange;
+}
+ 
+#sidebar-left{
+  float: left;
+  width: 109px;
+  padding-left: 10px;
+}
+ 
+// You'll want to define navigation width for items in the ul
+ 
+#vert-nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7em;
+  width: 80px;
+}
+ 
+#vert-nav ul li a{
+  text-decoration: none;
+  color: #00647D;
+}
+ 
+#sidebar-right{
+  float: right;
+  width: 213px;
+}
+ 
+.right-sidebar-title{
+  color: #00647D;
+  font-weight: bold;
+}
+ 
+#content {
+  margin: 0px 213px 0px 109px;
+  padding: 0px;
+}
+ 
+#content section h2{
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #00647D;
+  line-height: 1em;
+}
+ 
+#feature-image {
+  height: auto;
+  width: 100%;
+  max-width: 440px;
+  background: $gray;
+}
+ 
+.right-sidebar-image {
+  height: 93px;
+  width: 179px;
+  background: $gray;
+  margin: 12px 0px;
+}
+ 
+footer {
+  clear: both;
+  background: #00647D;
+  color: #FFF;
+  padding: 10px;
+}
+ 
+// Demonstrate nesting
+// & means the parent plus this element
+ 
+.left-sidebar-links {
+  a {
+    display: block;
+    color: $main-green;
+    opacity: .7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+ 
+.left-sidebar-links {
+  border-bottom: 2px solid $main-green;
+  &:last-child {
+    border: none;
+  }
+}
+ 
+// You can nest CSS properties as well
+.example-element {
+  border: {
+    top: 1px solid $blue;
+    right: 1px solid $red;
+    bottom: 1px solid $yellow;
+    left: 1px solid $green;
+  }
+}
+ 
+// @extend existing properties
+#riddle{
+  padding: 20px;
+  background-color: $alice-blue;
+}
+ 
+#riddle-answer{
+  @extend #riddle;
+  margin-top: 10px;
+}
+ 
+// Creating properties just so we can extend them
+ 
+%dotted-box {
+ 
+  border: 2px dotted $duke-blue;
+  margin: 10px 0px;
+}
+ 
+#riddle-answer{
+  @extend %dotted-box;
+}
+ 
+// Lighten a color
+// You can use darken in the same way
+ 
+.left-sidebar-links{
+  border-color: lighten($main-green, 70%);
+}
+ 
+// You can generate the 180 degree complement of a color
+ 
+#search-button:hover {
+  background-color: complement($main-green);
+}
+ 
+// You can invert a color by sending the degree (0 - 360)
+ 
+#search-button:hover {
+  background-color: adjust-hue($main-green, 90deg);
+}
+ 
+// Specify a background color for the <li> that is the
+// first child of #vert-nav ul and desaturate (darken)
+ 
+#vert-nav ul li:nth-child(1) {
+  background-color: desaturate($orange, 80%);
+}
+ 
+// Saturate a color by a percent
+ 
+#vert-nav ul li:nth-child(2){
+  background-color: saturate($orange, 80%);
+}
+ 
+// Define transparence (0 to 1 Opaque)
+ 
+#vert-nav ul li:nth-child(3){
+  background-color: fade-out($orange, .5);
+}
+ 
+// Make a color more opaque (0 to 1 Opaque)
+ 
+#vert-nav ul li:nth-child(3){
+  background-color: fade-in($orange, .8);
+}
+ 
+// Define the RGB color
+ 
+#vert-nav ul li:nth-child(4){
+  background-color: rgba(0, 0, 200, 0.5);
+}
+ 
+// Mix 2 colors plus the percent of the first color
+ 
+#vert-nav ul li:nth-child(5){
+  background-color: mix($yellow, $white, 50%);
+}
+ 
+// Make the color passed grayscale
+ 
+#vert-nav ul li:nth-child(6){
+  background-color: grayscale($yellow);
+}
+ 
+/*
+adjust-color allows you to adjust
+red, green and blue : 0 to 255
+hue : 0 to 359
+saturation : 0 to 100
+lightness : 0 to 100
+alpha : 0 to 1
+Either adjust RGB or HSL
+*/
+ 
+#vert-nav ul li:nth-child(7){
+  background-color: adjust-color($main-green, $red:0, $green:40, $blue:30);
+}
+ 
+#vert-nav ul li:nth-child(7){
+  background-color: adjust-color($main-green, $hue:30, $saturation:40, $lightness:30, $alpha:0.2);
+}
+ 
+// shade combines the color with a percent of black
+ 
+#vert-nav ul li:nth-child(8){
+  background-color: shade($yellow, 50%);
+}
+ 
+// tint combines the color with a percent of white
+ 
+#vert-nav ul li:nth-child(9){
+  background-color: tint($yellow, 50%);
+}
+ 
+// Rounds the border and adds a box shadow
+ 
+#riddle-answer {
+  @include border-radius(5px);
+ 
+  // Horizontal then vertical offset, blur, spread, color
+  @include box-shadow(5px 5px 5px 2px gray);
+}
+ 
+// Color, horizontal then verical offset, blur amount
+ 
+#main-title{
+  @include text-shadow(rgba(blue, 0.2) 2px 2px 3px);
+}
+ 
+// Created for extension
+// Direction or left / right / top / bottom, color stops
+ 
+%main-green-gradient{
+ 
+  @include background-image(linear-gradient(left, $main-green 80%, $white));
+}
+ 
+footer {
+  @extend %main-green-gradient;
+}
+ 
+#horz-nav {
+  @extend %main-green-gradient;
+}
+ 
+// Target the img with the given alt and change the src
+// and restore the proper size
+ 
+img[alt="Programming Frameworks"] {
+  content: image-url('featured-image.png');
+  /*
+  width: image-width('../images/featured-image.png');
+  height: image-height('../images/featured-image.png');
+  */
+}
+ 
+// Use a Compass mixin to scale 2x horz & vert
+// Move horz & vert, rotate 45deg and perform multiple transforms
+ 
+#logo {
+  @include scale(2,2);
+  @include transform(translateX(700px) translateY(10px)
+  scale(2,2) rotate(-45deg));
+}
+ 
+// Add the compass drop shadow on all text in the p
+ 
+article p:nth-child(2){
+  @include filter(drop-shadow($gray 1px 1px 0px));
+}
+ 
+// We can change properties based on conditions
+ 
+$riddle-color: gray;
+ 
+@if $riddle-color == blue {
+  #riddle {
+    background-color: $alice-blue;
+  }
+} @else {
+  #riddle {
+    background-color: $ash-gray;
+  }
+}
+ 
+// We can use for loops to change as we iterate
+ 
+$prct-yellow: 5%;
+ 
+@for $i from 1 through 14 {
+  #vert-nav ul li:nth-child(#{$i}){
+    background-color: mix($yellow, $white, $prct-yellow);
+  }
+ 
+  $prct-yellow: $prct-yellow + 5%
+ 
+}
+ 
+// Spriting with Compass
+// Combines images in the provided folder into 1 image
+// to limit server requests
+// Define the directory for the images and it provides
+// the background image definition and location for use
+// by your elements
+ 
+@import "compass/utilities/sprites";
+ 
+@import "icons/*.png";
+ 
+@include all-icons-sprites;
+ 
+.icons {
+  .clock { @include icons-sprite(clock);}
+  .diary { @include icons-sprite(diary);}
+  .printer { @include icons-sprite(printer);}
+  .weather { @include icons-sprite(weather);}
+}
+ 
+.icons * {
+  height: 64px;
+  width: 64px;
+}
+ 
+@import "compass/utilities/tables";
+ 
+.baseball-stats {
+  table {
+    $table-color: $black;
+    @include table-scaffolding;
+ 
+    // Define the inner border
+    @include inner-table-borders(4px, $table-color);
+ 
+    // Define the outer border
+    @include outer-table-borders(4px, $duke-blue);
+ 
+    // Handles table striping even row color, odd row color, intersection, header
+    @include alternating-rows-and-columns($alice-blue, $ash-gray, $table-color, $white);
+ 
+    width: 400px;
+  }
+}
+- See more at: http://www.newthinktank.com/2015/04/sass-video-tutorial/#sthash.MW8szz76.dpuf

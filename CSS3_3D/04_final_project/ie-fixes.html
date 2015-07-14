@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>CSS 3D Cube</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="iefixes.css">
 		<link rel="stylesheet" href="jquery-ui.css">
 	</head>
 	<body>
@@ -11,7 +11,7 @@
 		<div id="viewport">
 			<div id="cube">
 				<div id="front">
-				    <div id="pic"><img src="profile_pic.jpg" height="161" width="161" alt="Profile Picture"></div>
+				    <a href="#right" id="picA"><div id="pic"><img src="profile_pic.jpg" height="161" width="161" alt="Profile Picture"></div></a>
 				    <h1>Envanto</h1>
 				    <input type="password" id="inputNXT" placeholder="Password" />
 				</div>
@@ -24,25 +24,25 @@
                     </div>
                     <input type="text" placeholder="Email" />
                     <textarea placeholder="Address"></textarea>
-                    <a href="#" class="bck" id="RBack">Back</a>
-                    <a href="#" class="bxt" id="RNext">Next</a>
+                    <a href="#front" class="bck" id="RBack">Back</a>
+                    <a href="#back" class="bxt" id="RNext">Next</a>
 			</div>
                 <div id="back">
                     <textarea placeholder="Description"></textarea>
-                    <a href="#" class="back" id="BBack">Back</a>
-                    <a href="#" class="nxt" id="BNext">Next</a>
+                    <a href="#right" class="back" id="BBack">Back</a>
+                    <a href="#left" class="nxt" id="BNext">Next</a>
                 </div>
 				<div id="left">
 				    <h1>Profile Information</h1>
 				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam suscipit sunt ratione odit qui, illum ea architecto iusto. Soluta ex consequuntur quod. Corrupti labore harum dolorum sint eius, commodi modi.</p>
-				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor impedit quas reprehenderit architecto, vel aperiam!</p><a href="#" id="GoFront">Go to Front</a>
-				    <a href="#" id="finish">Finish</a>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor impedit quas reprehenderit architecto, vel aperiam!</p><a href="#front" id="GoFront">Go to Front</a>
+				    <a href="#top" id="finish">Finish</a>
 				</div>
 				<div id="top">
 				    <img src="tick" src="tick.png" width="40" height="40" alt="">
 				    <h1>Thank You</h1>
 				</div>
-				<div id="bottom"><h1>Text</h1></div>
+				<div id="bottom"></div>
 		    </div>
 		
     <script src="modernizr.js" type="text/ecmascript"></script>
@@ -51,6 +51,10 @@
 	<script src="oridomi.js" type="application/ecmascript"></script>
 	<script type="application/ecmascript">
         $(function(){
+            
+            if($('html').hasClass('csstransformspreserve3d')) {
+               
+            
             $('#daveOver').datepicker({
                 numberOfMonts: 3,
                 prevText: '<',
@@ -95,7 +99,9 @@
             });
             
             $('#wrap').find('*').addClass('NotMe');
-        
+            
+            $('#GoFront,#picA, #finish,.nxt,.back').attr('href','#')
+              
             $('inputNXT').on('focus',function(){
                 $('#cube').removeClass().addClass('RF');
             });
@@ -108,7 +114,7 @@
                 $('#cube').removeClass().addClass('BF');
             });
             
-            $('#BBack').on('click',function(){
+            $('#BBack','#picA').on('click',function(){
                 $('#cube').removeClass().addClass('RF');
             });
             
@@ -124,6 +130,14 @@
                 $('#cube').removeClass().addClass('FF');
             });
             
+            } else {
+          
+                $('#dateTrigger').datepicker({
+                    prevText: '<',
+                    nextText: '>'
+                });
+            }
+          
         });
     </script>
 	</body>

@@ -5,23 +5,25 @@
     top: 50%;
     left: 50%;
     margin: -100px 0 0 -100px;
-    -webkit-perspective: 1000px;
-    -moz-perspective:1000px;
-    perspective:1000px;
+    overflow: hidden;
 }
 
 .csstransformspreserve3d #viewport {
-
+    -webkit-perspective: 1000px;
+    -moz-perspective:1000px;
+    perspective:1000px;
+    overflow: visible;
 }
 
 #cube {
     width: 100%;
     height: 100%;
-/*    -webkit-transform:translateZ(-190px) rotateY(-270) rotateZ(-90deg);*/
+}
+
+.csstransformspreserve3d #cube {
     -webkit-transform:transformZ(-190px);
     transform:rotateX(0deg);
     -webkit-transform-style: preserve-3D;
-/*    transform-style: preserve-3D;*/
     transform-style: flat;
     -webkit-transition:all 1s;
 }
@@ -52,43 +54,56 @@
 }
 
 #front,#back,#top,#bottom,#left,#right{
+    width: 380px;
+    height: 380px;
+    float: left;
+}
+
+.csstransformspreserve3d #front ~ div{
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-#front {
+#front,#back,#top {
     background: red;
+}
+
+#bottom,#left,#right{
+    background: yellow;
+}
+
+.csstransformspreserve3d #front {
     -webkit-transform:translateZ(190px);
 }
 
-#back {
-    background: red;
+.csstransformspreserve3d #back {
     -webkit-transform:translateZ(-190px) rotateY(-180deg);
 }
 
-#top{
-    background: yellow;
+.csstransformspreserve3d #top {
     -webkit-transform:translateY(-190px) rotateX(90deg);
 }
 
-#bottom{
-    background: yellow;
+.csstransformspreserve3d #bottom {
     -webkit-transform:translateY(190px) rotateX(-90deg);
 }
 
-#left{
-    background: green;
+.csstransformspreserve3d #left {
     -webkit-transform:translateX(-190px) rotateY(-90deg);
 }
 
-#right{
-    background: green;
+.csstransformspreserve3d #right {
     -webkit-transform:translateX(190px) rotateY(90deg);
 }
 
 #anim:hover + #viewport > #cube {
     -webkit-transform: translateX(400px) rotateX(-290deg) rotateY(150deg) rotateZ(130deg);
+}
+
+/* JQuery Calendar Styles*/
+.csstransformspreserve3d #date {
+    display: block;
 }
 
 #date, #dateOver {
@@ -97,11 +112,12 @@
     width: 650px;
     margin-left: -135px;
     height: 247px;
+    display: none;
 }
 @-miz-document url-prefix() {
     #date{overflow:hidden;}
 }
-#date.hidden, #dateOver {
+#date.hidden {
     display: none;
 }
 

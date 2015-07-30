@@ -4,12 +4,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Our Vineyard</title>
 		<style type="text/css">
-			/* css goes here */
+			body {
+				font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			}
 		</style>
 	</head>
 
 	<body bgcolor="f7f5f2">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f7f5f2">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="f7f5f2">
 			<tr>
 				<td>
 			<table class="container" width="630" align="center" border="0" cellpadding="0" cellspacing="0">
@@ -18,22 +20,36 @@
 						<img src="img/holiadvice_logo.png" alt="Our Vineyard" width="630" height="100" border="0">
 					</td>
 				</tr>
+				<tr>
+					<td>
+					<p style="font-weight:bold; ">Dear username,</p>
+					<p >Welcome to Holiadvice!</p>
+					<p style="line-height:20px; font-size: 14px;">In order to help maintain the security of your Holiadvice account, please verify your email address by clicking the button below.</p>
+					<br>
+					<a href="#" style="color:#ffffff; text-decoration:none; background-color:#0994d6; padding: 12px 20px; margin:210px; width: 170px;">Verify email address</a>
+					<br>
+					<p style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;">You email address will be used to assist you in changing your Holiadvice account credentials or regaining access to your Holiadvice account, should you ever need help with those things.</p>
+					
+					<p>Thanks for helping us maintain the security of your account.
+					If you have any questions, please contact us at <a href="#" style="color:#0994d6; text-decoration:none; ">support@holiadvice.com</a></p>
+					
+					<p style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;">The Holiadvice Support Team</p>
+					<a href="#" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#0994d6; text-decoration:none;">http://holiadvice.com</a>
+					<br>
+					<p>You're receiving this email because you recently created a new Holiadvice account. If this wasn't you, please ignore this email.</p>
+					<p>This email message was auto-generated. Please do not respond.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="img/logo_small.png" alt="Our Vineyard" width="100" height="106" border="0">
+					</td>
+				</tr>
 			</table>
 						
 				</td>
 			</tr>
 		</table>
-				<!-- style="color:#f7f5f2;" -->
-				<!-- Hello <%= @resource.email %>!
 
-Someone has requested a link to change your password. You can do this
-through the link below.
-
-<%= edit_password_url(@resource, reset_password_token: @token) %>
-
-If you didn't request this, please ignore this email.
-
-Your password won't change until you access the link above and create a new one. -->
-		
 	</body>
 </html>

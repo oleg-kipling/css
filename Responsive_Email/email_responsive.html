@@ -5,6 +5,8 @@
 		<title>Our Vineyard</title>
 		<style type="text/css">
 			/* css goes here */
+            
+            @import url(http://fonts.googleapis.com/css?family=Parisienne);
 
             body { margin: 0; padding: 0; }
 
@@ -25,6 +27,9 @@
                 td.promos table td img { display: none; }
                 td.promos table.promo_1 td { background: url(img/promo_1_medium.jpg) no-repeat 0px 0px; padding: 100px 0px 0px 0px;}
                 td.promos table.promo_2 td { background: url(img/promo_2_medium.jpg) no-repeat 0px 0px; padding: 100px 0px 0px 0px; }
+
+                video { width: 416px !important; height: 312px !important; }
+                video img { width: 416px !important; height: 312px !important; }
             }
 
             @media only screen and (max-width: 510px) {
@@ -53,32 +58,83 @@
                 td.callout { padding: 20px 30px 0px 30px !important; }
                 td.callout  table {width: 100% !important; margin-bottom: 20px; }
                 td.callout table td { padding: 0px 0px 10px 50px !important; background-size: 50px 50px !important; min-height: 60px; }
-                td.callout table a { display: unline; }
+                td.callout table br.spacer { display: inline; }                
+                td.callout table a { display: inline; }
+
                 td.callout table.callout_1 td { background-position: 0px -6px; }
                 td.callout table.callout_2 td { background-position: 4px -2px; }
                 td.callout table.callout_3 td { background-position: 0px -7px; }
-                td.callout table.callout_4 td { background-position: 4px -17px; }
-                td.callout table br.spacer { display: inline; }
+                td.callout table.callout_4 td { background-position: 4px -17px;}
+                
+                video { width: 300px !important; height: 255px !important; }
+                video img { width: 300px !important; height: 255px !important; }
             }
-
-
+                td.footer { padding: 20px 30px !important; }
+            
+                        /* high definition graphics for medium screens */
+            @media
+                only screen and (max-width: 660px) and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (max-width: 660px) and (min--moz-device-pixel-ratio: 2),
+                only screen and (max-width: 660px) and (-o-min-device-pixel-ratio: 2/1),
+                only screen and (max-width: 660px) and (min-device-pixel-ratio: 2),
+                only screen and (max-width: 660px) and (min-resolution: 192dpi),
+                only screen and (max-width: 660px) and (min-resolution: 2dppx)          
+            {
+                td.logo  { background-image: url(images/logo_medium_2x.gif); background-size: 510px 38px; }
+                td.banner { background-image: url(images/banner_medium_2x.jpg); background-size:  478px 150px; }
+                td.content { background-image: url(images/banner_medium_ghost_2x.jpg) !important; background-size: 478px 90px; }
+                td.promos table.promo_1 td { background-image: url(images/promo_1_medium_2x.jpg); background-size: 185px 90px; }
+                td.promos table.promo_2 td { background-image: url(images/promo_2_medium_2x.jpg); background-size: 185px 90px; }
+                td.callout table.callout_1 td { background-image: url(images/icon_grapes_2x.gif); background-size: 75px 75px; }
+                td.callout table.callout_2 td { background-image: url(images/icon_bottle_2x.gif); background-size: 75px 75px; }
+                td.callout table.callout_3 td { background-image: url(images/icon_basket_2x.gif); background-size: 75px 75px; }
+                td.callout table.callout_4 td { background-image: url(images/icon_camera_2x.gif); background-size: 75px 75px; }     
+            }
+            
+            
+            /* high definition graphics for small screens */
+            @media
+                only screen and (max-width: 510px) and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (max-width: 510px) and (min--moz-device-pixel-ratio: 2),
+                only screen and (max-width: 510px) and (-o-min-device-pixel-ratio: 2/1),
+                only screen and (max-width: 510px) and (min-device-pixel-ratio: 2),
+                only screen and (max-width: 510px) and (min-resolution: 192dpi),
+                only screen and (max-width: 510px) and (min-resolution: 2dppx)
+            {
+            
+                td.logo { background-image: url(images/logo_small_2x.gif); background-size: 260px 25px; }
+                td.banner { background-image: url(images/banner_small_2x.jpg); background-size: 510px 115px; }
+                td.content { background-image: url(images/banner_small_ghost_2x.jpg) !important; background-size: 510px 70px; }
+                td.promos table.promo_1 td { background-image: url(images/promo_1_small_2x.jpg); background-size: 85px 85px; }
+                td.promos table.promo_2 td { background-image: url(images/promo_2_small_2x.jpg); background-size: 85px 85px; }
+                td.callout table.callout_1 td { background-image: url(images/icon_grapes_2x.gif); background-size: 75px 75px; }
+                td.callout table.callout_2 td { background-image: url(images/icon_bottle_2x.gif); background-size: 75px 75px; }
+                td.callout table.callout_3 td { background-image: url(images/icon_basket_2x.gif); background-size: 75px 75px; }
+                td.callout table.callout_4 td { background-image: url(images/icon_camera_2x.gif); background-size: 75px 75px; }
+            
+            }
 
 		</style>
 	</head>	
 	<body bgcolor="efe1b0">
         
+        <div style="font-size: 1px; color: #efe1b0; display: none;">
+            Place your preview message text here. This will show is most email clients as the preview text in the inbox. Also, make sure it is long enough to take up all of the space available by your chosen email clients.
+        </div>
+
         <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#efe1b0">
             <tr>
                 <td>
             <table class="container" width="630" align="center" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td valign="top" class="logo" bgcolor="#ffffff" style="padding: 10px 20px 0; border-left: 1px solid #dbc064; border-right: 1px solid #dbc064; border-top: 1px solid #dbc064;">
-                    <a href="#"><img src="img/logo_large.gif" alt="Our Vineyard" width="585" height="45" border="0"></a>    
+                    <!-- <a href="#"><img src="data:image/gif;base64,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" alt="Our Vineyard" width="585" height="45" border="0"></a>  --> 
+                    <a href="#"><img src="img/logo_large.gif" alt="Our Vineyard" width="585" height="45" border="0"></a>  
                     </td>
                 </tr>
                 <tr>
                     <td valign="top" class="headline" bgcolor="#ffffff" style="padding: 15px 20px 5px 30px; border-left: 1px solid #dbc064; border-right: 1px solid #dbc064; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 22px;">
-                    <h1 style="margin: 0px 0px 15px 0px; font-weight: normal; font-size: 32px; color: #723c7f">Main Heading Here</h1>
+                    <h1 style="margin: 0px 0px 15px 0px; font-weight: normal; font-family: 'Parisienne', cursive, Arial; font-size: 32px; color: #723c7f">Main Heading Here</h1>
                     </td>
                 </tr>
                 <tr>
@@ -104,7 +160,14 @@
                 </tr>
                 <tr>
                     <td valign="top" bgcolor="#f5f2e5" class="promos" style="padding: 10px 30px 25px 30px; border-right:1px solid #dbc064; border-left:1px solid #dbc064; background-color: #f5f2e5; font-family: Arial, Helvetica, sans-serif;">
-                    <table class="promo_1" width="270" align="left">
+                    
+                    <video width="570" height="428" poster="video/our_vinevard.jpg" controls="controls">
+                        <source src="video/our_vinevard.mp4" type="video/mp4">
+                        <a href="http://yoursite.com/video.html"><img src="video/our_vinevard.jpg"></a>
+                    </video>
+
+
+<!--                 <table class="promo_1" width="270" align="left">
                        <tr>
                            <td>
                                <img class="promo" alt="Promo image 1" src="img/promo_1_large.jpg">
@@ -115,7 +178,8 @@
                            </td>
                        </tr>
                     </table>
-                    <table class="promo_2" width="270" align="right">
+
+                     <table class="promo_2" width="270" align="right">
                        <tr>
                            <td>
                                <img class="promo" alt="Promo image 2" src="img/promo_2_large.jpg">
@@ -125,7 +189,9 @@
                                 <a href="#" style="background-color: #71a412; border-radius: 5px; color: #fff; padding: 5px 10px 10px; text-decoration: none; text-shadow: 0px 2px 2px #3a5606">Learn more</a>
                            </td>
                        </tr>
-                    </table> 
+                    </table> -->
+
+
                     </td>
                 </tr>
                 <tr>

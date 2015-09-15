@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Filters</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:900,400' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/script.js"></script>
+
+  </head>
+  <body>
+
+    <div id="container">
+      <div class="row">
+        <div class="large-4 columns">
+          <h1 class="svgs">Some fancy text</h1>
+        </div>
+        <div class="large-4 columns">
+          <div id="object" class="svgs"></div>
+        </div>
+        <div class="large-4 columns">
+          <img src="img/mountain.png" class="svgs">
+        </div>
+      </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="svg" x="0" y="0">  
+          
+          <!-- 4 -->
+          <!-- <feGaussianBlur in="SourceGraphic" stdDeviation="7" /> -->
+          <!-- <feColorMatrix in="SourceGraphic" type="saturate" values="0" /> -->
+          
+          <!--  <feColorMatrix in="SourceGraphic" type="luminanceToAlpha"/> -->
+          <!--  <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0
+                   1 1 1 1 0
+                   0 0 0 0 0
+                   0 0 0 1 0 "/> -->
+          
+          <!-- <feConvolveMatrix orger="3" kernelMatrix="-1 0 0 0 0 0 0 0 1" /> -->
+          <!-- <feMorphology operator="erode" radius="4" /> -->
+          <!-- <feMorphology operator="dilate" radius="3" /> -->
+          
+          <!-- 5 -->
+          <feOffset result="shadowed" dx="30" dy="30" />
+          <feColorMatrix result="matrixOut" in="shadowed" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+          <feGaussianBlur result="blurshadow" in="matrixOut" stdDeviation="10" />
+          <feBlend in="SourceGraphic" in="shadowed" mode="normal" />
+
+        </filter>
+      </defs>
+    </svg>
+
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+  </body>
+</html>

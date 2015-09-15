@@ -1,0 +1,48 @@
+.clearfix {
+	display:block;
+	clear:both;
+}
+
+
+#container {
+	background: #00c7b2;
+	padding: 250px 0;
+}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+	font-family: 'Raleway';
+	font-weight: bold;
+	line-height: 1em;
+}
+
+#object, img {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.svgs {
+	filter: url(../index.html#svg);
+	-webkit-filter: url(../index.html#svg);
+}
+
+#object {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	border: 20px solid #cafc00;
+}
+
+
+@media only screen and (max-width: 40.063em) {
+
+	
+
+}
+
+@media only screen and (max-width: 64.063em) {
+
+
+}

@@ -1,0 +1,136 @@
+.clearfix {
+	display:block;
+	clear:both;
+}
+
+#cover {
+	background: url(../img/cover.jpg) no-repeat;
+	background-size: cover;
+	background-position: fixed;
+	height: 600px;
+	filter:url(../index.html#f2) opacity(15%);
+	-webkit-filter:url(#f2) opacity(15%);
+	position: absolute;
+	width: 100%;
+}
+
+h1 {
+	font-family: 'Raleway';
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 5em;
+	margin: 100px 0 50px 100px;
+	line-height: 65px;
+}
+
+h2, p, a {
+	font-family: 'Raleway';
+	font-weight: 300;
+}
+
+a {
+	display: block;
+	margin-left: 100px;
+	font-size: 1.5em;
+	padding: 12px 20px;
+	text-align: center;
+}
+
+a#specs {
+	border: 1px solid #000;
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	color:#000;
+}
+
+a#buy {
+	background: #02d391;
+	color:#fff;
+	margin-top: 25px;
+}
+
+#overlay-container, #buy-container {
+	position: absolute;
+	width: 60%;
+	left: 20%;
+}
+
+#overlay {
+	position: absolute;
+	width: 100%;
+	height: 600px;
+	z-index: 1;
+	top: -600px;
+	background: url(../img/cover.jpg) no-repeat fixed;
+	background-size: cover;
+	filter: brightness(20%) saturate(30%);
+	-webkit-filter: brightness(20%) saturate(30%);
+	animation: move .7s ease forwards;
+	-webkit-animation: move .7s ease forwards;
+}
+
+.nosvg {
+	-weblit-filter: none !important;
+	filter:none !important;
+}
+
+#specifications, #buy-content {
+	padding: 50px;
+	z-index: 2;
+	position: absolute;
+}
+
+#buy-content {
+	width: 100%;
+	padding: 0;
+}
+
+h2 {
+	color:#02d391;
+}
+p {
+	color:#fff;
+}
+
+#circle {
+	border-radius: 50%;
+	display: block;
+	width: 200px;
+	height: 200px;
+	background: url(../img/cover.jpg);
+	margin: 155px auto;
+}
+
+#black-container {
+	background: #000;
+	padding: 80px 50px;
+	margin: 100px 0;
+	width: 100%;
+	text-align: center;
+}
+
+#black-container a {
+	margin: 40px 50px;
+}
+
+
+@keyframes move {
+	0% { top: -600px; }
+	100% { top: 0; }
+}
+
+@-webkit-keyframes move {
+	0% { top: -100%; }
+	100% { top: 0; }
+}
+
+@media only screen and (max-width: 40.063em) {
+
+	
+
+}
+
+@media only screen and (max-width: 64.063em) {
+
+
+}

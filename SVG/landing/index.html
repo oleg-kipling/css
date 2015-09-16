@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Filters</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- <link rel="stylesheet" href="css/animations.css" /> -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:900,400' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/script.js"></script>
+
+  </head>
+  <body>
+
+  <div id="cover"></div>
+  
+  <div class="large-12">
+    <div class="row">
+      <div class="large-4 columns">
+        <h1>Manage the wires</h1>
+        <a href="" id="specs">The Specifications</a>
+        <a href="" id="buy">Buy NoWare</a>
+      </div>
+      
+      <div class="large-8 columns">
+        <div id="initial-content">
+          <div id="circle"></div>
+        </div>
+        <div id="overlay-container" style="display:none;">
+          <div id="overlay"></div>
+          <div id="specifications">
+            <h2>Specifications</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, numquam, atque? Impedit ipsum, nemo sequi. Aspernatur ipsum, nemo totam neque accusantium. Voluptas dicta, eos ut molestias non, adipisci eius unde?</p>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, numquam, atque?</p>
+                                
+            <p>Aspernatur ipsum, nemo totam neque accusantium. Voluptas dicta, eos ut molestias non, adipisci eius unde?</p>
+          </div>
+        </div>
+        <div id="buy-container" style="display:none;">
+          <div id="overlay" class="nosvg"></div>
+          <div id="buy-content">
+            <div id="black-container">
+              <img src="img/cart.png" />
+              <a href="#" id="buy">$19 Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <svg height="0" xmlns="http://www.w3.org/2000.sv">
+
+    <filter id="f2">
+      <feColorMatrix in="SourceGraphic"
+      type="saturate"
+      values="0" />
+      <feGausianBlur stdDeviation="1" />
+    </filter> 
+    
+    <filter id="morph">
+      <feColorMatrix in="SourceGraphic"
+      type="saturate"
+      values="0.6" />
+    </filter> 
+
+  </svg>
+
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,103 @@
+body {
+	background: white;
+}
+
+#container {
+	filter:url("../index.html#goo");
+	-webkit-filter:url("#goo");
+	position: absolute;
+	width: 100%;
+	margin-top: 180px;
+	padding: 130px 0 170px 0;
+}
+
+.orbital, .orbital2 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: red;
+	animation: moveOriginal 2s forwards infinite ease-in;
+}
+
+#check {
+	position: absolute;
+	left:0;
+	right: 0;
+	margin: 321px auto;
+	z-index: 2;
+	-webkit-filter:unset;
+	filter:unset;
+	cursor:pointer;
+	animation: thumbsAnim 2s forwards infinite ease-in;
+}
+
+#two {
+	animation: moveBall 2s forwards infinite ease-in;
+}
+
+.secondaryMove {
+	animation: moveSecondary 2s forwards ease-in;
+}
+
+.secondaryMovetwo {
+	animation: secondaryMovetwo  2s forwards ease-in;
+}
+
+.clickAnim {
+	animation: clickAnim 2s forwards ease-in;
+}
+
+.finalAnim {
+	animation: finalAnim 2s forwards ease-in;
+}
+
+
+@keyframes moveOriginal {
+	0% { transform: scale(0); }
+	10% { transform: scale(0); }
+	20% { transform: scale(1.5); }
+	50% { transform: scale(1); }
+}
+
+@keyframes thumbsAnim {
+	0% { opacity: 0; }
+	20% { opacity: 0; }
+	21% { opacity: 100; }
+	100% { opacity: 100; }
+}
+
+@keyframes moveBall {
+	0% { top: 0; transform: scale(0); }
+	20% { top: 140px; transform: scale(1); }
+	30% { top: 140px; transform: scale(1); }
+	80% { top: 280px; transform: scale(0); }
+	100% { top: 280px; transform: scale(0); }
+}
+
+@keyframes clickAnim {
+	0% { transform: scale(0); }
+	10% { transform: scale(0); }
+	20% { transform: scale(1.5); }
+	50% { transform: scale(1); }
+}
+
+@keyframes moveSecondary {
+	0% { left: 0; transform:scale(1); }
+	100% { left: 1000px; transform:scale(0); }
+}
+
+@keyframes secondaryMovetwo {
+	0% { right: 0; transform:scale(1); }
+	100% { right: 1000px; transform:scale(0); }
+}
+
+@keyframes finalAnim {
+	0% { transform:scale(1); }
+	50% { transform:scale(2); }
+	100% { transform:scale(0); }
+}
+
